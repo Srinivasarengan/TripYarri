@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <title>Booking</title>
+    <link href="https://fonts.googleapis.com/css?family=Russo+One|Scada&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Lato&family=Open+Sans:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!--css-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+
+    <!--imgfont-->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+    <!--,java script-->
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+
+<script type="text/javascript">
+  function validateForm() {
+  if (isEmpty(document.getElementById('guestname').value.trim())) {
+  alert('Name is required!');
+  return false;
+  }
+  if (isEmpty(document.getElementById('guestemail').value.trim())) {
+  alert('Email is required!');
+  return false;
+  }
+  if (isEmpty(document.getElementById('guestelephone').value.trim())) {
+  alert('Phone no. is required!');
+  return false;
+  }
+  if (isEmpty(document.getElementById('adults').value.trim())) {
+  alert('No of aldluts required!');
+  return false;
+  }
+  if (!validateEmail(document.getElementById('children').value.trim())) {
+  alert( 'no of childern');
+  return false;
+  }
+  if (isEmpty(document.getElementById('checkin').value.trim())) {
+  alert('Arrival date is required!');
+  return false;
+  }
+  if (isEmpty(document.getElementById('checkintime').value.trim())) {
+  alert('time is required!');
+  return false;
+  }
+  if (isEmpty(document.getElementById('checkout').value.trim())) {
+  alert('Date is required!');
+  return false;
+  }
+  if (isEmpty(document.getElementById('checkouttime').value.trim())) {
+  alert('Number of adults is required!');
+  return false;
+  }
+  if (isEmpty(document.getElementById('comment').value.trim())) {
+  alert('Number of adults is required!');
+  return false;
+  }
+  
+  }
+  window.alert("Your Booking has been Confirmed!!..");
+ return false;
+  </script>
+
+
+
+  <body class="mb">
+    <div class="ms1"></div>
+      <div class="row im_g" style="opacity: 0.96;">
+        <div class="ms1"></div>
+        <div class="mc">
+            <div class="mr1">
+              <h4><i class="fa fa-calendar"></i>Make Room Reservations in Minutes</h4>
+          <div style="float:left; width: 44%;"><hr/></div>
+        <div style="float:right; width: 44%;"><hr/></div>
+        <h6 style="vertical-align:middle;"> Dream,Plan,Travel</h6>
+      </div>
+          <br>
+          <div class="mr2">
+            <div class="mi1">
+            <form method="post" action="/" id="contact">
+            <label for="guestname" class="field-label">Please Enter Your Name</label>
+            <span class="field-icon"><i class="fa fa-user"></i>&nbsp;:&nbsp;&nbsp;</span>
+            <label for="guestname" class="field-label"></label>
+              <input type="text" name="guestname" id="guestname" class="mg1" required="" placeholder="   Riteesh Sathyamoorthy" size="25px" >
+            </label>
+                <br>
+                <label for="guestemail" class="field-label">Email Address</label>
+                <span class="field-icon"><i class="fa fa-envelope"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;</span> 
+                <label for="guestemail" class="field-label"></label>
+                    <input type="email" name="guestemail" id="guestemail" class="mg1" required="" placeholder="  riteeshsathyamoorthy@gmail.com" size="35px" >
+                  </label>
+                  <br>
+                  <label for="guestelephone" class="field-label">Telephone / Mobile</label>
+                  <span class="field-icon"><i class="fa fa-phone-square"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;</span>  
+                  <label for="guestelephone" class="field prepend-icon">
+                    <input type="text" name="guestelephone" id="guestelephone" class="mg1" required="" placeholder=" +91 1234567890">
+                  </label>
+                  <br>
+                  <label for="adults" class="field-label">Number of Adults</label>
+                  <span class="field-icon"><i class="fa fa-users"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;</span>  
+                  <label for="adults" class="field prepend-icon">
+                    <input type="number" id="adults" name="adults" class="mg1" required="" placeholder="Number of adults">
+                  </label>
+                  <br>
+                  <label for="children" class="field-label">Number of Children</label>
+                  <span class="field-icon"><i class="fa fa-users"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;</span> 
+                  <label for="children" class="field prepend-icon">
+                    <input type="number" id="children" name="children" class="mg1" required="" placeholder="Number of children">
+                  </label>
+                  <br>
+                  <label for="checkin" class="field-label">Check-in Date</label>
+                  <span class="field-icon"><i class="fa fa-calendar"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;</span> 
+                  <label for="checkin" class="field prepend-icon">
+                    <input type="date" id="checkin" name="checkin" class="mg1" required="" placeholder="mm/dd/yyyy"> 
+                  </label>
+                  <br>
+                  <label for="checkintime" class="field-label">Check-in Time</label>
+                  <span class="field-icon"><i class="fa fa-clock"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;</span> 
+                  <label for="checkin" class="field prepend-icon">
+                    <input type="time" id="checkintime" name="checkintime" class="mg1" required="" placeholder="00:00"> 
+                  </label>
+                  <br>
+                  <label for="checkout" class="field-label">Check-out Date</label>
+                  <span class="field-icon"><i class="fa fa-calendar"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;</span>  
+                  <label for="checkout" class="field prepend-icon">
+                    <input type="date" id="checkout" name="checkout" class="mg1" required="" placeholder="mm/dd/yyyy">
+                  </label>
+                  <br>
+                  <label for="checkouttime" class="field-label">Check-out Time</label>
+                  <span class="field-icon"><i class="fa fa-clock"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;</span>  
+                  <label for="checkout" class="field prepend-icon">
+                    <input type="time" id="checkouttime" name="checkouttime" class="mg1" required="" placeholder="mm/dd/yyyy">
+                  </label>
+                  <br>
+                  <span>Please select the below options for a pleasant stay:</span>
+                  <br>
+                  <label class="switch">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" name="switch1" id="switch1" value="switch1">
+                    <span class="switch-label" data-on="YES" data-off="NO"></span>
+                    <span>Will you be bringing a pet?.</span>
+                  </label>
+                  <br>
+                  <label class="switch">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="switch2" id="switch2" value="switch2">
+                    <span class="switch-label" data-on="YES" data-off="NO"></span>
+                    <span>Do you need us to pick you up?</span>
+                  </label>
+                  <br>
+                  <label class="switch">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="switch3" id="switch3" value="switch3">
+                    <span class="switch-label" data-on="YES" data-off="NO"></span>
+                    <span>Is this your Honeymoon!!!...</span>
+                  </label>
+                  <br>
+                  <label for="comment" class="field-label">Anything else we should know about?</label>
+                  <span class="field-icon"><i class="fa fa-comments"></i>&nbsp;:</span>
+                  <br>&nbsp;&nbsp;&nbsp;
+                <label for="comment" class="field prepend-icon">
+                  <textarea class="mg1" id="comment" name="comment" placeholder="Let us know about any special accommodation needs" rows="4" cols="50"></textarea>
+                  <br>
+                  <span style="font-size: 12px;"> 
+                    <strong>Please:</strong> Be as descriptive as possible
+                  </span>   
+                </label>
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="submit" class="mi2">Confirm Booking</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <button type="button"  class="mi2"><a href="index.html">Cancel</a></button>
+            </form>
+            </div>
+          </div>
+        </div> 
+        <div class="ms2"></div>   
+      </div>
+      <div class="ms2"></div>    
+  </body>
+</html>
